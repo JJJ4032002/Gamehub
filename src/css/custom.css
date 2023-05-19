@@ -12,7 +12,7 @@
 }
 @font-face {
   font-family: "Bambi";
-  src: url("/Bambi.ttf") format("truetype");
+  src: url("/Bambi.TTF") format("truetype");
 }
 :root {
   --ifm-color-primary: #2e8555;
