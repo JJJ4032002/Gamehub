@@ -12,7 +12,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "pull": "npx docu-notion -n secret_Q6dlXBnSA8CJMthkGX5oODQpwGxT2KHXq7fX0YDwzKr -r f705ab80c2354bfd94e20a74fc507e82"
+    "pull": "npx docu-notion-for-dashwave -n $DOCU_NOTION_INTEGRATION_TOKEN -r $DOCU_NOTION_SAMPLE_ROOT_PAGE -m ./blog"
   },
   "dependencies": {
     "@docusaurus/core": "2.4.1",
