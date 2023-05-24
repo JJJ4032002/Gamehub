@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <>
       <Layout
-        title={`Hello from ${siteConfig.title}`}
-        description="Description will go into a meta tag in <head />"
+        title={`Gamehub`}
+        description="All about games at one single place"
       >
         <Container sx={{ height: "calc(100vh - 111px)" }} maxWidth="100%">
           <Grid

@@ -6,9 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
-  favicon: "img/favicon.ico",
+  title: "Gamehub",
+  tagline: "All about games and lores at one place",
 
   // Set the production url of your site here
   url: "https://your-docusaurus-test-site.com",
@@ -78,6 +77,7 @@ const config = {
           { to: "/blog", label: "Blog", position: "left" },
           { to: "/ArtShow", label: "ArtWorks", position: "left" },
           { to: "/Merch", label: "Merch", position: "left" },
+          { to: "/EvaluateCart", label: "Cart", position: "right" },
         ],
       },
       footer: {

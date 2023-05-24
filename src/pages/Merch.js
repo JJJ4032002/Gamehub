@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGetProductsQuery } from "../features/api/apiSlice";
 import { CircularProgress, Container } from "@mui/material";
-import { Grid, Stack } from "@mui/material";
+import { Grid, Stack, Button, Snackbar } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../features/cart/cartSlice";
 import Layout from "@theme/Layout";
+
 function Merch() {
+  const dispatch = useDispatch();
+  const [changeText, setChangeText] = useState(false);
+  function handleClose() {
+    setChangeText(false);
+  }
   const {
     data: products,
     isLoading,
@@ -47,14 +55,45 @@ function Merch() {
                   />
                 </div>
                 <p></p>
-                <Stack sx={{ padding: "0em 0.7em" }}>
-                  <p>{post.title}</p>
+                <Stack
+                  sx={{
+                    padding: "0em 0.7em",
+                  }}
+                >
+                  <p
+                    style={{
+                      overflow: "hidden",
+                      whiteSpace: "nowrap",
+                      textOverflow: "ellipsis",
+                    }}
+                  >
+                    {post.title}
+                  </p>
                   <p>Price: {post.price}</p>
+                  <Button
+                    onClick={() => {
+                      setChangeText(true);
+                      dispatch(
+                        addToCart({
+                          ...post,
+                        })
+                      );
+                    }}
+                  >
+                    {"Add to Cart"}
+                  </Button>
+                  <p></p>
                 </Stack>
               </Stack>
             </Grid>
           ))}
         </Grid>
+        <Snackbar
+          autoHideDuration={6000}
+          open={changeText}
+          onClose={handleClose}
+          message="Item Added"
+        ></Snackbar>
       </>
     );
   } else if (isError) {

@@ -1,0 +1,9 @@
+rohan:
+  name: Author 1
+  title: Creator at Company1
+  image_url: https://picsum.photos/id/1/200/300
+
+saksham:
+  name: Author 2
+  title: Creator at Company 2
+  image_url: https://picsum.photos/id/5/200/300
